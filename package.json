@@ -1,0 +1,16 @@
+{
+  "name": "quasars",
+  "version": "1.0.0",
+  "description": "Package Analytics for node based modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "analytics",
+    "node",
+    "package.json"
+  ],
+  "author": "Sneh Raj Lakhotia, Pradyumna Ghose, Sunil Sah",
+  "license": "ISC"
+}
