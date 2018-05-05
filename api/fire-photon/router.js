@@ -11,6 +11,7 @@ router.post('/', (req, res) => {
                 res.status(400).send({error: "Something went wrong, please check and try again."});
                 return;
             }
+
             res.status(200).send(result);
         });
     } catch (err) {

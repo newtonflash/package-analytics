@@ -9,7 +9,8 @@ router.get('/packageCount', (req, res) => {
                 res.status(400).send({error: "Oops!"});
                 return;
             }
-            res.status(200).send(result);
+
+            res.status(200).send({count: result});
         });
     } catch (err) {
         console.error('Something went wrong behind the scenes: ', err);
