@@ -8,13 +8,19 @@ let schema = new mongoose.Schema({
             os : { type: String}
     },
     packageInfo: {
-        name :      { type: String},
+        name :      { type: String, required: true},
         version :   { type: String},
         description:{ type: String},
         author :    { type: String},
         license:  { type: String},
-        dependencies: {type: Object},
-        devDependencies: { type: Object}
+        dependencies: [{
+            name: {type: String, required: true},
+            version: {type: String, required: true}
+        }],
+        devDependencies: [{
+            name: {type: String, required: true},
+            version: {type: String, required: true}
+        }]
     }
 
 }, { collection: 'quasars' });

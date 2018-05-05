@@ -13,8 +13,26 @@ const addPackage = function addPackage(newPackage, done) {
     pkg.packageInfo.description = newPackage.description || '';
     pkg.packageInfo.author = newPackage.author || '';
     pkg.packageInfo.license = newPackage.license || '';
-    pkg.packageInfo.dependencies = newPackage.dependencies || {};
-    pkg.packageInfo.devDependencies = newPackage || {};
+
+    newPackage.dependencies = newPackage.dependencies || {};
+    newPackage.devDependencies = newPackage.devDependencies || {};
+    pkg.packageInfo.dependencies = [];
+    pkg.packageInfo.devDependencies = [];
+
+    for(var prop in newPackage.dependencies) {
+        pkg.packageInfo.dependencies.push({
+            name: prop,
+            version: newPackage.dependencies[prop]
+        });
+    }
+
+    for(var prop in newPackage.devDependencies) {
+        pkg.packageInfo.devDependencies.push({
+            name: prop,
+            version: newPackage.devDependencies[prop]
+        });
+    }
+
     pkg.save((err, savedPkg) => {
         if(err) {
             console.error('Error in adding new product', err);
