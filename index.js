@@ -1,5 +1,6 @@
 const express = require('express');
 const PORT = process.NODE_PORT | 5050;
+const mongoConn = require('./mongoConnection')();
 
 let app = express();
 
