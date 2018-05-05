@@ -9,6 +9,10 @@ app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 // Setup bodyParsing middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
+
 app.use(require('./api'));
+
+
 
 module.exports = app;

@@ -4,7 +4,7 @@
   "description": "Package Analytics for node based modules",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon ./index.js"
   },
   "keywords": [
     "analytics",
@@ -19,6 +19,7 @@
     "mongo": "^0.1.0"
   },
   "devDependencies": {
-    "mongoose": "^5.0.17"
+    "mongoose": "^5.0.17",
+    "nodemon": "^1.17.3"
   }
 }
