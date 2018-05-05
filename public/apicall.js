@@ -6,7 +6,19 @@
 
     $("#search_technology").on("submit", function(){
         var keywords = ("#tech_keys").val();
-        $.ajax();
+        $.ajax({
+            url: '/stats/packageCount',
+            type: 'GET',
+            data: {
+                keywords: keywords
+            },
+            success: (res) => {
+                alert(res.count);
+            },
+            error: (err) => {
+                console.error(err);
+            }
+        });
     });
 
 })(jQuery);
