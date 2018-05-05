@@ -4,8 +4,10 @@
         $.ajax();
     });
 
-    $("#search_technology").on("submit", function(){
-        var keywords = ("#tech_keys").val();
+    $("#search_technology").on("submit", (ev) => {
+        ev.stopPropagation();
+        ev.preventDefault();
+        var keywords = $("#tech_keys").val();
         $.ajax({
             url: '/stats/packageCount',
             type: 'GET',
