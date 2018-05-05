@@ -5,5 +5,6 @@ const mongoConn = require('./mongoConnection')();
 let app = express();
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+app.use(require('./api/fire-photon'));
 
 module.exports = app;
