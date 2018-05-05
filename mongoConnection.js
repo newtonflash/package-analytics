@@ -26,6 +26,6 @@ const setupMongooseConnections = function() {
         process.exit(0);
       });
     });
-  }
+  };
   
   module.exports = setupMongooseConnections;

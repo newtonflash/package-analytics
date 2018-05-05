@@ -1,5 +1,5 @@
 {
-  "name": "quasars",
+  "name": "quasars-package-analytics",
   "version": "1.0.0",
   "description": "Package Analytics for node based modules",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "node",
     "package.json"
   ],
-  "author": "Sneh Raj Lakhotia, Pradyumna Ghose, Sunil Sah",
+  "author": "QUASARS - Sneh Raj Lakhotia, Pradyumna Ghose, Sunil Sah",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
