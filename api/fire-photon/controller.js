@@ -7,8 +7,7 @@ const updateRecords = function (data, responseCB){
 };
 
 const addPackage = function addPackage(data, done) {
-    console.log('data: ', data)
-    done(null, {});
+    packageService.addPackage(data, done);
 };
 
 module.exports = {
